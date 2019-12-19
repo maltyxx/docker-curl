@@ -2,7 +2,7 @@ FROM alpine:3.10
 
 LABEL maintainer="Yoann VANITOU <yvanitou@gmail.com>"
 
-ARG CURL_VERSION=7.65.3
+ARG CURL_VERSION=7.67.0
 
 RUN set -x \
     && apk add --no-cache --virtual mybuild \
