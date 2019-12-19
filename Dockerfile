@@ -32,4 +32,8 @@ RUN set -x \
     && rm -rf /tmp/* \
     && apk del mybuild
 
-CMD ["/usr/bin/curl", "--help"]
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["curl", "--help"]
