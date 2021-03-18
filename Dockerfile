@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3
 
 LABEL maintainer="Yoann VANITOU <yvanitou@gmail.com>"
 
@@ -32,7 +32,7 @@ RUN set -x \
     && rm -rf /tmp/* \
     && apk del mybuild
 
-COPY entrypoint.sh /
+ADD rootfs/ /
 
 ENTRYPOINT ["/entrypoint.sh"]
 
